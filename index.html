@@ -6,115 +6,128 @@
   <title>Complete Question Paper</title>
   <style>
     body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f7fc;
-  margin: 0;
-  padding: 0;
-}
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7fc;
+      margin: 0;
+      padding: 0;
+    }
 
-h1, h2 {
-  color: #4caf50;
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 30px;
-}
+    h1, h2 {
+      color: #4caf50;
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 30px;
+    }
 
-h2 {
-  color: #2196f3;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
+    h2 {
+      color: #2196f3;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
 
-form {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  margin: 0 auto;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
+    form {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      margin: 0 auto;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
 
-.question {
-  margin-bottom: 20px;
-}
+    .question {
+      margin-bottom: 20px;
+    }
 
-.question p {
-  font-size: 1rem;
-  margin: 10px 0;
-}
+    .question p {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
 
-input[type="text"], select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
 
-input[type="text"]:focus, select:focus {
-  border-color: #4caf50;
-  outline: none;
-}
+    input[type="text"]:focus, select:focus {
+      border-color: #4caf50;
+      outline: none;
+    }
 
-button.submit-btn {
-  width: 200px;
-  padding: 15px;
-  background-color: #4caf50;
-  color: white;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 5px;
-  margin: 20px auto;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+    button.submit-btn {
+      width: 200px;
+      padding: 15px;
+      background-color: #4caf50;
+      color: white;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      margin: 20px auto;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-button.submit-btn:hover {
-  background-color: #45a049;
-}
+    button.submit-btn:hover {
+      background-color: #45a049;
+    }
 
-.result {
-  text-align: center;
-  font-size: 1.5rem;
-  color: #2196f3;
-  margin-top: 20px;
-}
+    .result {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #2196f3;
+      margin-top: 20px;
+    }
 
-select {
-  background-color: #f9f9f9;
-  color: #555;
-}
+    select {
+      background-color: #f9f9f9;
+      color: #555;
+    }
 
-select option {
-  padding: 10px;
-}
+    select option {
+      padding: 10px;
+    }
 
-.question input:focus,
-.question select:focus {
-  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
-}
+    .question input:focus,
+    .question select:focus {
+      box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+    }
 
-@media only screen and (max-width: 768px) {
-  form {
-    width: 95%;
-    padding: 15px;
-  }
+    @media only screen and (max-width: 768px) {
+      form {
+        width: 95%;
+        padding: 15px;
+      }
 
-  h1 {
-    font-size: 1.8rem;
-  }
+      h1 {
+        font-size: 1.8rem;
+      }
 
-  h2 {
-    font-size: 1.3rem;
-  }
+      h2 {
+        font-size: 1.3rem;
+      }
 
-  .submit-btn {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-  }
-}
+      .submit-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+      }
+    }
+
+    .feedback {
+      font-size: 0.9rem;
+      color: #ff5722;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .incorrect {
+      color: red;
+    }
   </style>
 </head>
 <body>
@@ -126,11 +139,13 @@ select option {
     <div class="question">
       <p>1. Fill in the blanks: I ______ finished my homework. (Present Perfect)</p>
       <input type="text" id="q1" placeholder="Your answer">
+      <div class="feedback" id="feedback-q1"></div>
     </div>
 
     <div class="question">
       <p>2. Fill in the blanks: By the time we arrived, the movie ______ begun. (Past Perfect)</p>
       <input type="text" id="q2" placeholder="Your answer">
+      <div class="feedback" id="feedback-q2"></div>
     </div>
 
     <div class="question">
@@ -141,11 +156,13 @@ select option {
           <option value="past-perfect">Past Perfect</option>
         </select>
       </p>
+      <div class="feedback" id="feedback-q3"></div>
     </div>
 
     <div class="question">
       <p>4. Rewrite the sentence: The train leave before we reached. (Use Past Perfect)</p>
       <input type="text" id="q4" placeholder="Your answer">
+      <div class="feedback" id="feedback-q4"></div>
     </div>
 
     <h2>Conjunctions</h2>
@@ -158,6 +175,7 @@ select option {
           <option value="but">but</option>
         </select>
       </p>
+      <div class="feedback" id="feedback-q5"></div>
     </div>
 
     <div class="question">
@@ -168,11 +186,13 @@ select option {
           <option value="not-only-but-also">not only...but also</option>
         </select>
       </p>
+      <div class="feedback" id="feedback-q6"></div>
     </div>
 
     <div class="question">
       <p>7. Correct the sentence: She likes both apples or oranges.</p>
       <input type="text" id="q7" placeholder="Your answer">
+      <div class="feedback" id="feedback-q7"></div>
     </div>
 
     <h2>Prepositions</h2>
@@ -180,16 +200,19 @@ select option {
     <div class="question">
       <p>8. Fill in the blanks: The cat is hiding ______ the table.</p>
       <input type="text" id="q8" placeholder="Your answer">
+      <div class="feedback" id="feedback-q8"></div>
     </div>
 
     <div class="question">
       <p>9. Fill in the blanks: She has been waiting ______ an hour.</p>
       <input type="text" id="q9" placeholder="Your answer">
+      <div class="feedback" id="feedback-q9"></div>
     </div>
 
     <div class="question">
       <p>10. Identify the preposition: The dog is running ______ the garden.</p>
       <input type="text" id="q10" placeholder="Your answer">
+      <div class="feedback" id="feedback-q10"></div>
     </div>
 
     <button type="button" class="submit-btn" onclick="calculateScore()">Submit</button>
@@ -215,20 +238,39 @@ select option {
         q10: "in" // Identify Preposition
       };
 
-      // Check answers
-      if (document.getElementById("q1").value.trim().toLowerCase() === answers.q1) score += 2.5;
-      if (document.getElementById("q2").value.trim().toLowerCase() === answers.q2) score += 2.5;
-      if (document.getElementById("q3").value === answers.q3) score += 2.5;
-      if (document.getElementById("q4").value.trim().toLowerCase() === answers.q4) score += 2.5;
-      if (document.getElementById("q5").value === answers.q5) score += 2.5;
-      if (document.getElementById("q6").value === answers.q6) score += 2.5;
-      if (document.getElementById("q7").value.trim().toLowerCase() === answers.q7) score += 2.5;
-      if (document.getElementById("q8").value.trim().toLowerCase() === answers.q8) score += 2.5;
-      if (document.getElementById("q9").value.trim().toLowerCase() === answers.q9) score += 2.5;
-      if (document.getElementById("q10").value.trim().toLowerCase() === answers.q10) score += 2.5;
+      // Check answers and provide feedback
+      // Check answers and provide feedback
+function checkAnswer(questionId, correctAnswer) {
+  const userAnswer = document.getElementById(questionId).value.trim().toLowerCase();
+  const feedbackElement = document.getElementById('feedback-' + questionId);
+
+  if (userAnswer === correctAnswer.toLowerCase()) {
+    score += 2.5;
+    feedbackElement.textContent = 'Correct!';
+    feedbackElement.classList.add('correct');
+    feedbackElement.classList.remove('incorrect');
+  } else {
+    feedbackElement.textContent = `Incorrect! Correct answer: ${correctAnswer}`;
+    feedbackElement.classList.add('incorrect');
+    feedbackElement.classList.remove('correct');
+  }
+}
+
+      checkAnswer("q1", answers.q1);
+      checkAnswer("q2", answers.q2);
+      checkAnswer("q3", answers.q3);
+      checkAnswer("q4", answers.q4);
+      checkAnswer("q5", answers.q5);
+      checkAnswer("q6", answers.q6);
+      checkAnswer("q7", answers.q7);
+      checkAnswer("q8", answers.q8);
+      checkAnswer("q9", answers.q9);
+      checkAnswer("q10", answers.q10);
 
       // Display the result
-      document.getElementById("result").textContent = `Your Score: ${score} / 25`;
+           // Display the result
+           const resultElement = document.getElementById('result');
+      resultElement.textContent = `Your Score: ${score} / 25`;
     }
   </script>
 </body>

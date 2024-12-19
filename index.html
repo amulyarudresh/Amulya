@@ -1,55 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="veiwport" content="width-device-width, initial-scale=1.0">
-    <title>My Profile</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Question Paper</title>
+  <style>
+    body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #4caf50;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+h2 {
+  color: #2196f3;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+button.submit-btn {
+  width: 200px;
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.submit-btn:hover {
+  background-color: #45a049;
+}
+
+.result {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #2196f3;
+  margin-top: 20px;
+}
+
+select {
+  background-color: #f9f9f9;
+  color: #555;
+}
+
+select option {
+  padding: 10px;
+}
+
+.question input:focus,
+.question select:focus {
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+}
+
+@media only screen and (max-width: 768px) {
+  form {
+    width: 95%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+  </style>
 </head>
 <body>
-    <div class="profile-container">
-        <h1>Amulya Rudresh</h1>
-        <div class="profile-image">
-            <img src="profile.jpeg" alt="Profile Image" class="profile-image">
-        </div>
-        <div class="profile-section">
-            <h2>USN</h2>
-            <p>NNM23CS024</p>
-        </div>
-        <div class="profile-section">
-            <h2>Branch</h2>
-            <p>Computer Science and Engineering</p>
-        </div>
-        <div class="profile-section">
-            <h2>Semester</h2>
-            <p>3rd Semester</p>
-        </div>
-        <div class="profile-section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming</li>
-                <li>Web Development</li>
-                <li>Data Analysis</li>
-            </ul>
-        </div>
-        <div class="profile-section">
-            <h2>Hobbies</h2>
-            <ul>
-                <li>Reading</li>
-                <li>Traveling</li>
-                <li>Photography</li>
-                <li>Coding</li>
-            </ul>
-        </div>
+  <h1>Answer the Questions</h1>
+  <h2>Present Perfect and Past Perfect Tenses</h2>
+
+  <form id="quiz-form">
+    <!-- Question Paper 1 -->
+    <div class="question">
+      <p>1. Fill in the blanks: I ______ finished my homework. (Present Perfect)</p>
+      <input type="text" id="q1" placeholder="Your answer">
     </div>
 
-    <footer>
-        <div class="Social-links">
-            <a href="www.facebook">Facebook></a>
-            <a href="www.twitter.con">Twitter</a>
-            <a href="www.github.com">Github</a>
-         </div>
-         <p>@copy;2024 Amulya Rudresh.All Rights reserve</p>
-    </footer>
+    <div class="question">
+      <p>2. Fill in the blanks: By the time we arrived, the movie ______ begun. (Past Perfect)</p>
+      <input type="text" id="q2" placeholder="Your answer">
+    </div>
+
+    <div class="question">
+      <p>3. Match the sentence with its tense: She had cooked before we came.  
+        <select id="q3">
+          <option value="">Select</option>
+          <option value="present-perfect">Present Perfect</option>
+          <option value="past-perfect">Past Perfect</option>
+        </select>
+      </p>
+    </div>
+
+    <div class="question">
+      <p>4. Rewrite the sentence: The train leave before we reached. (Use Past Perfect)</p>
+      <input type="text" id="q4" placeholder="Your answer">
+    </div>
+
+    <h2>Conjunctions</h2>
+    <!-- Question Paper 2 -->
+    <div class="question">
+      <p>5. Fill in the blanks: I wanted to go out, ______ it was raining.  
+        <select id="q5">
+          <option value="">Select</option>
+          <option value="and">and</option>
+          <option value="but">but</option>
+        </select>
+      </p>
+    </div>
+
+    <div class="question">
+      <p>6. Choose the correct conjunction: He is ______ smart ______ hardworking.  
+        <select id="q6">
+          <option value="">Select</option>
+          <option value="either-or">either...or</option>
+          <option value="not-only-but-also">not only...but also</option>
+        </select>
+      </p>
+    </div>
+
+    <div class="question">
+      <p>7. Correct the sentence: She likes both apples or oranges.</p>
+      <input type="text" id="q7" placeholder="Your answer">
+    </div>
+
+    <h2>Prepositions</h2>
+    <!-- Question Paper 3 -->
+    <div class="question">
+      <p>8. Fill in the blanks: The cat is hiding ______ the table.</p>
+      <input type="text" id="q8" placeholder="Your answer">
+    </div>
+
+    <div class="question">
+      <p>9. Fill in the blanks: She has been waiting ______ an hour.</p>
+      <input type="text" id="q9" placeholder="Your answer">
+    </div>
+
+    <div class="question">
+      <p>10. Identify the preposition: The dog is running ______ the garden.</p>
+      <input type="text" id="q10" placeholder="Your answer">
+    </div>
+
+    <button type="button" class="submit-btn" onclick="calculateScore()">Submit</button>
+  </form>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    function calculateScore() {
+      let score = 0;
+
+      // Correct answers
+      const answers = {
+        q1: "have", // Present Perfect
+        q2: "had",  // Past Perfect
+        q3: "past-perfect", // Matching tense
+        q4: "had left", // Rewrite Past Perfect
+        q5: "but", // Conjunction
+        q6: "not-only-but-also", // Correlative Conjunction
+        q7: "both apples and oranges", // Correct sentence
+        q8: "under", // Preposition
+        q9: "for", // Preposition (duration)
+        q10: "in" // Identify Preposition
+      };
+
+      // Check answers
+      if (document.getElementById("q1").value.trim().toLowerCase() === answers.q1) score += 2.5;
+      if (document.getElementById("q2").value.trim().toLowerCase() === answers.q2) score += 2.5;
+      if (document.getElementById("q3").value === answers.q3) score += 2.5;
+      if (document.getElementById("q4").value.trim().toLowerCase() === answers.q4) score += 2.5;
+      if (document.getElementById("q5").value === answers.q5) score += 2.5;
+      if (document.getElementById("q6").value === answers.q6) score += 2.5;
+      if (document.getElementById("q7").value.trim().toLowerCase() === answers.q7) score += 2.5;
+      if (document.getElementById("q8").value.trim().toLowerCase() === answers.q8) score += 2.5;
+      if (document.getElementById("q9").value.trim().toLowerCase() === answers.q9) score += 2.5;
+      if (document.getElementById("q10").value.trim().toLowerCase() === answers.q10) score += 2.5;
+
+      // Display the result
+      document.getElementById("result").textContent = `Your Score: ${score} / 25`;
+    }
+  </script>
 </body>
 </html>
